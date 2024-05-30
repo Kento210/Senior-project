@@ -9,6 +9,9 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends libopencv-dev && \
     rm -rf /var/lib/apt/lists/*
 
+# flaskをインストール
+RUN pip install Flask
+
 # Pythonライブラリをインストール
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir opencv-python opencv-contrib-python
